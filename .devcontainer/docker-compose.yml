@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  devcontainer:
+    image: dockerhub.itt.aws.odev.com.au/almalinux:latest  #mcr.microsoft.com/devcontainers/base:ubuntu
+    volumes:
+      - ../..:/workspaces:cached
+      - ./ca-bundle.crt:/tmp/ca-bundle.crt
+      - ./ca-bundle.trust.crt:/tmp/ca-bundle.trust.crt
+
+      
+    command: sleep infinity
