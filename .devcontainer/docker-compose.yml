@@ -6,6 +6,6 @@ services:
       - ../..:/workspaces:cached
       - ./ca-bundle.crt:/tmp/ca-bundle.crt
       - ./ca-bundle.trust.crt:/tmp/ca-bundle.trust.crt
-
+      - $HOME/.aws:/root/.aws:cached
       
     command: sleep infinity
