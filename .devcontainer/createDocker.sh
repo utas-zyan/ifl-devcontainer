@@ -19,3 +19,7 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 yum install -y java-11-openjdk #java-11-openjdk-devel
 source $HOME/.bashrc
 sdk install groovy
+
+echo "export JAVA_HOME=$(readlink -f $(which java) | sed 's:bin/java::')
+export PATH=\$JAVA_HOME/bin:\$PATH" >> $HOME/.bashrc
+source $HOME/.bashrc
